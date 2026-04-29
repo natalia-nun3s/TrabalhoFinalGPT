@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>SENAI Diadema.Bot - Atendente Virtual Oficial</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div class="site-container">
+        <!-- Header com logo oficial SENAI SP -->
+        <header class="senai-header">
+            <div class="logo-area">
+                <div class="logo-senai">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Crect width='200' height='200' fill='%23E30613' rx='30'/%3E%3Ctext x='100' y='135' text-anchor='middle' fill='white' font-size='90' font-weight='800' font-family='Arial'%3ES%3C/text%3E%3C/svg%3E" alt="Logo SENAI" class="logo-img">
+                </div>
+                <div class="title-bot">
+                    <h1>SENAI <span class="sp-marca">SÃO PAULO</span></h1>
+                    <p>Unidade Diadema | Atendimento virtual</p>
+                </div>
+            </div>
+            <div class="badge-ai">
+                <i class="fas fa-microchip"></i> SENAI Diadema.Bot
+            </div>
+        </header>
+
+
+        <div class="main-layout">
+            <!-- LATERAL ESQUERDA: CARDS DE CURSOS -->
+            <aside class="courses-sidebar">
+                <div class="sidebar-header">
+                    <h2><i class="fas fa-graduation-cap"></i> Cursos Técnicos</h2>
+                    <p>Clique e saiba mais</p>
+                </div>
+                <div class="courses-grid">
+                    <div class="course-card" data-curso="Mecatrônica">
+                        <div class="course-icon">⚙️</div>
+                        <div class="course-info">
+                            <h3>Mecatrônica</h3>
+                            <p>Automação industrial e robótica</p>
+                            <span class="course-badge paid">💰 Pago</span>
+                        </div>
+                    </div>
+                    <div class="course-card" data-curso="Desenvolvimento de Sistemas" id="devSystemsCard">
+                        <div class="course-icon">💻</div>
+                        <div class="course-info">
+                            <h3>Desenvolvimento de Sistemas</h3>
+                            <p>Programação web e mobile</p>
+                            <span class="course-badge paid">💰 Pago</span>
+                        </div>
+                    </div>
+                    <div class="course-card" data-curso="Eletroeletrônica">
+                        <div class="course-icon">🔌</div>
+                        <div class="course-info">
+                            <h3>Eletroeletrônica</h3>
+                            <p>Circuitos e eletrônica embarcada</p>
+                            <span class="course-badge paid">💰 Pago</span>
+                        </div>
+                    </div>
+                    <div class="course-card" data-curso="Logística">
+                        <div class="course-icon">📦</div>
+                        <div class="course-info">
+                            <h3>Logística</h3>
+                            <p>Cadeia de suprimentos</p>
+                            <span class="course-badge free">🎓 Gratuito</span>
+                        </div>
+                    </div>
+                    <div class="course-card" data-curso="Segurança do Trabalho">
+                        <div class="course-icon">🛡️</div>
+                        <div class="course-info">
+                            <h3>Segurança do Trabalho</h3>
+                            <p>Prevenção de acidentes</p>
+                            <span class="course-badge paid">💰 Pago</span>
+                        </div>
+                    </div>
+                    <div class="course-card" data-curso="Administração">
+                        <div class="course-icon">📊</div>
+                        <div class="course-info">
+                            <h3>Administração</h3>
+                            <p>Gestão empresarial</p>
+                            <span class="course-badge free">🎓 Gratuito</span>
+                        </div>
+                    </div>
+                    <div class="course-card" data-curso="Eletricista Instalador">
+                        <div class="course-icon">⚡</div>
+                        <div class="course-info">
+                            <h3>Eletricista Instalador</h3>
+                            <p>Instalações elétricas</p>
+                            <span class="course-badge free">🎓 Gratuito</span>
+                        </div>
+                    </div>
+                </div>
+               
+                <div class="quality-badge">
+                    <i class="fas fa-award"></i>
+                    <div>
+                        <strong>Reconhecido MEC</strong>
+                        <small>Excelência em educação</small>
+                    </div>
+                </div>
+            </aside>
+
+
+            <!-- ÁREA PRINCIPAL: CHAT -->
+            <main class="chat-main">
+                <!-- Painel de controle simplificado -->
+                <div class="control-panel">
+                    <div class="control-group">
+                        <label><i class="fas fa-thermometer-half"></i> Criatividade</label>
+                        <div class="slider-container">
+                            <input type="range" id="temperatureSlider" min="0" max="2" step="0.05" value="0.5">
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label><i class="fas fa-text-height"></i> Resposta</label>
+                        <div class="slider-container">
+                            <input type="range" id="tokensSlider" min="50" max="1000" step="10" value="600">
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Chat -->
+                <div class="chat-area">
+                    <div class="chat-header">
+                        <div class="chat-header-left">
+                            <i class="fas fa-comment-dots"></i>
+                            <strong>SENAI Diadema.Bot</strong>
+                            <span class="online-badge"><i class="fas fa-circle"></i> Online</span>
+                        </div>
+                    </div>
+                   
+                    <div class="chat-messages" id="chatMessages">
+                        <div class="message bot">
+                            <div class="bot-avatar">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <div class="message-content">
+                                <div class="message-header">
+                                    <span class="sender-name">SENAI.Bot</span>
+                                    <span class="message-time">Agora</span>
+                                </div>
+                                <div class="message-text">
+                                    Olá! 👋 Seja bem-vindo(a) ao SENAI Diadema!<br><br>
+                                    Posso ajudar com:<br><br>
+                                    📌 Matrícula<br>
+                                    📞 Telefone: (11) 4070-8950<br>
+                                    📍 Endereço: R. Guatemala, 19<br>
+                                    🕐 Horário: 8h às 22h<br>
+                                    💰 Cursos Pagos<br>
+                                    🎓 Cursos Gratuitos<br><br>
+                                    Digite sua pergunta abaixo 👇
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                   
+                    <div class="suggestions">
+                        <div class="suggestions-title">
+                            <i class="fas fa-lightbulb"></i> Perguntas frequentes:
+                        </div>
+                        <div class="suggestions-list" id="suggestionsList">
+                            <div class="suggest-chip" data-question="Como faço para me matricular no SENAI Diadema?">
+                                <i class="fas fa-pen-alt"></i> Matrícula
+                            </div>
+                            <div class="suggest-chip" data-question="Qual o telefone do SENAI Diadema?">
+                                <i class="fas fa-phone"></i> Telefone
+                            </div>
+                            <div class="suggest-chip" data-question="Qual o endereço do SENAI Diadema?">
+                                <i class="fas fa-location-dot"></i> Endereço
+                            </div>
+                            <div class="suggest-chip" data-question="Quais são os cursos gratuitos do SENAI Diadema?">
+                                <i class="fas fa-graduation-cap"></i> Gratuitos
+                            </div>
+                            <div class="suggest-chip" data-question="Quais são os cursos pagos do SENAI Diadema?">
+                                <i class="fas fa-credit-card"></i> Pagos
+                            </div>
+                        </div>
+                    </div>
+                   
+                    <div class="input-area">
+                        <div class="input-wrapper">
+                            <i class="fas fa-robot input-icon"></i>
+                            <input type="text" id="userInput" placeholder="Digite sua pergunta...">
+                            <button id="sendBtn">
+                                <i class="fas fa-paper-plane"></i>
+                                Enviar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+
+
+        <footer>
+            <div class="footer-content">
+                <span>SENAI São Paulo - Unidade Diadema</span>
+                <span><i class="fas fa-phone"></i> (11) 4070-8950</span>
+                <span><i class="fas fa-map-marker-alt"></i> R. Guatemala, 19</span>
+            </div>
+        </footer>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
